@@ -2,9 +2,9 @@ FROM tiangolo/nginx-rtmp:latest
 
 LABEL maintainer="MightyDetail <mightydetail@gmail.com>"
 
-# Install stunnel
+# Install stunnel + ffmpeg
 RUN apt-get update && \
-    apt-get install -y stunnel4
+    apt-get install -y stunnel4 ffmpeg
     
 # Set up config file
 COPY stunnel.conf /etc/stunnel/stunnel.conf
